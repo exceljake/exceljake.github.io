@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/user-dashboard.css">
+    <link rel="icon" href="../img/icons/savourbank-logo-removebg.png">
+    <title>User Profile | SavourBank</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="img-container"> <img src="../img/icons/savourbank-logo-name-removebg.png" class="nav-logo" alt=""></div>
+        <div class="button-container">
+            <button class="user-profile header-button"><a href="user-profile.html">User Profile</a></button>
+            <button class="user-transactions header-button"><a href="user-transactions.html">User Transactions</a></button>
+            <button class="budget-app header-button">Budget App</button>
+            <button class="budget-app-income header-button budget-app-button hide"><a href="budget-income.html">Income</a></button>
+            <button class="budget-app-expense header-button budget-app-button hide"><a href="budget-expense.html">Expense</a></button>
+            <button class="logout header-button"> <a href="/home-page-html/index.html">Logout</a></button>
+        </div>
+    </nav>
+
+
+    <div class="user-dashboard-title-div">
+        <div class="user-dashboard-title-text expense-title">Budget Expense</div>
+    </div>
+    <section class="expense-modal">
+        <div class="modal-div-expense">
+
+            <div class="modal-container-expense">
+                <div class="modal-expense">
+                    <button class="close-expense">X</button>
+                    <h1>Please state your new expense</h1> <br>
+                    <form action="">
+                        <div class="form-item">
+                            <label for="expense-type">Type of Expense</label>
+                            <input type="text" class="expense-type">
+                        </div> <br>
+                        <div class="form-item">
+                            <label for="expense-price">Price of Expense</label>
+                            <input type="number" class="expense-price">
+                        </div>
+                    </form> <br>
+                    <button class="expense-submit">Submit</button>
+                </div>
+            </div>
+            <button class="expense-add">
+                Add Expense
+             </button>
+
+            <button class="expense-delete">
+                Delete
+            </button>
+        </div>
+    </section>
+
+    <section class="table-section">
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Transaction I.D.</th>
+                        <th>Amount</th>
+                        <th>Date and Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+        </div>
+    </section>
+
+    <script src="/js/user-dashboard/budget-expense.js" type="module"></script>
+    <script src="../js/user-dashboard/nav-user-dashboard.js" type="module"></script>
+
+    </section>
+
+</body>
+
+</html>

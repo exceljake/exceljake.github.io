@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+ :root {
+    /* --main-color-1: gold; */
+    --main-color-2: #85bb65;
+    --main-color-3: #000000;
+    --main-color-4: #228B22;
+}
+
+
+/*****************
+**HEADER AND NAV** 
+******************/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: whitesmoke;
+    border-right: 5px solid var(--main-color-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--main-color-4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    background-color: transparent;
+    text-shadow: .5px .5px var(--main-color-3);
+}
+
+.header-button:hover {
+    color: var(--main-color-1);
+}
+
+.budget-app-button {
+    color: var(--main-color-1);
+    text-shadow: .5px .5px var(--main-color-3);
+    font-size: 13px;
+}
+
+.nav-logo {
+    height: 250px;
+    width: 250px;
+}
+
+.user-dashboard-title-div {
+    width: 80vw;
+    background-color: var(--main-color-2);
+    margin-top: 20px;
+    height: 100px;
+    margin-left: 250px;
+}
+
+.user-dashboard-title-text {
+    font-size: 80px;
+    color: var(--main-color-3);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px var(--main-color-4);
+    ;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+
+/* Create user */
+
+.create-user,
+.deposit-section,
+.withdraw-section,
+.transfer-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-user-container,
+.deposit-container,
+.withdraw-container,
+.transfer-container {
+    margin-left: 260px;
+    margin-top: 20px;
+    width: 300px;
+    height: 350px;
+    border-left: 5px solid var(--main-color-2);
+    border-right: 5px solid var(--main-color-2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.create-user-title,
+.deposit-title,
+.withdraw-title,
+.transfer-title {
+    text-align: center;
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.create-user-content,
+.deposit-content,
+.withdraw-content,
+.transfer-content {
+    width: 80%;
+}
+
+.fullname,
+.balance,
+.mobile,
+.mobile-deposit,
+.amount-deposit,
+.mobile-withdraw,
+.amount-withdraw,
+.sender,
+.receiver,
+.amount-transfer {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(133, 187, 101);
+    width: 235px;
+}
+
+.input-title {
+    font-weight: 600;
+}
+
+.create-user-submit-div,
+.deposit-submit-div,
+.withdraw-submit-div,
+.transfer-submit-div {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-user-submit,
+.deposit-submit,
+.withdraw-submit,
+.transfer-submit {
+    width: 100px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: var(--main-color-2);
+    border: var(--main-color-2);
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* .create-user-submit:hover,
+.deposit-submit:hover,
+.withdraw-submit:hover,
+.transfer-submit:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+
+
+/* DEPOSIT  */
+
+.deposit-container,
+.withdraw-container {
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+
+/* TRANSFER */
+
+.transfer-container {
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+
+/****************************************
+**TABLE INCOME AND EXPENSE TRANSACTIONS** 
+*****************************************/
+
+.table {
+    border-collapse: collapse;
+    width: 75%;
+    /* position: absolute; */
+    border: 2px solid black;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+
+td,
+th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: var(--main-color-2);
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: var(--main-color-2);
+}

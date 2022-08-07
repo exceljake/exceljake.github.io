@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icons/savourbank-logo-removebg.png">
+    <title>SavourBank</title>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <div class="nav-logo-name">
+            <img src="../img/icons/savourbank-logo-removebg.png" alt="logo" class="nav-logo">
+            <div class="nav-bank-name">SavourBank</div>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+        </label>
+        <!-- <div class="nav-button-container"> -->
+        <ul class="menu">
+            <li><button class="home-button nav-button"> <a  href="./index.html">Home</a></button></li>
+
+            <li><button class="login-button nav-button"><a  href="./login.html">Login</a></button></li>
+
+            <li><button class="register-button nav-button"><a   href="./register.html">Register</a></button></li>
+        </ul>
+        <!-- </div> -->
+    </nav>
+
+    <section class="register-section">
+        <div class="register-content">
+            <div class="logo-register"><img src="../img/icons/savourbank-logo-name-removebg.png" alt="Logo"></div>
+            <div class="register-input-div">
+                <div class="register-title">Register to a new account</div> <br>
+                <form>
+                    <div class="form-item">
+                        <label for="" class="input-title">Fullname:</label> <br>
+                        <input type="text" class="fullname-register" required>
+                    </div> <br>
+                    <div class="form-item">
+                        <label for="" class="input-title">Mobile number:</label> <br>
+                        <input type="number" class="mobile-register" required>
+                    </div> <br>
+                    <div class="form-item">
+                        <label for="" class="input-title">Password:</label> <br>
+                        <input type="password" class="password-register" required>
+                    </div> <br>
+                    <div class="form-item-submit">
+                        <button type="submit" class="register-submit-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="../js/user/register.js" type="module"></script>
+
+</body>
+
+</html>

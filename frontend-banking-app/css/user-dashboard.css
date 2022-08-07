@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+ :root {
+    /* --main-color-1: gold; */
+    --main-color-2: #85bb65;
+    --main-color-3: #000000;
+    --main-color-4: #228B22;
+}
+
+
+/*****************
+**HEADER AND NAV** 
+******************/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: whitesmoke;
+    border-right: 5px solid var(--main-color-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--main-color-4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    background-color: transparent;
+    text-shadow: .5px .5px var(--main-color-3);
+}
+
+.header-button:hover {
+    color: var(--main-color-1);
+}
+
+.budget-app-button {
+    color: var(--main-color-1);
+    text-shadow: .5px .5px var(--main-color-3);
+    font-size: 13px;
+}
+
+.nav-logo {
+    height: 250px;
+    width: 250px;
+}
+
+.user-dashboard-title-div {
+    width: 80vw;
+    background-color: rgba(133, 187, 101, 0.9);
+    margin-top: 20px;
+    height: 100px;
+    margin-left: 250px;
+}
+
+.user-dashboard-title-text {
+    font-size: 80px;
+    color: var(--main-color-3);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px var(--main-color-4);
+    ;
+}
+
+
+/*****************
+***USER PROFILE*** 
+******************/
+
+.user-profile-content {
+    height: 350px;
+    width: 350px;
+    border: 2px solid var(--main-color-3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 47vw;
+    margin-top: 70px;
+}
+
+.upc-text-details {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    color: var(--main-color-3);
+}
+
+.upc-text-name {
+    font-size: 25px;
+}
+
+.content {
+    margin-left: 250px;
+}
+
+
+/*****************
+******HIDE******** 
+******************/
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+
+/****************************
+**INCOME AND EXPENSE MODALS** 
+*****************************/
+
+.modal-div,
+.modal-div-expense {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin: 0;
+}
+
+.income-add,
+.income-submit,
+.income-delete,
+.expense-add,
+.expense-submit,
+.expense-delete {
+    background-color: var(--main-color-2);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.income-add,
+.expense-add {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.income-delete,
+.expense-delete {
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+    cursor: pointer;
+}
+
+.modal-container,
+.modal-container-expense {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal,
+.modal-expense {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.modal h1,
+.modal-expense h1 {
+    margin: 0;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.close-income,
+.close-expense {
+    position: absolute;
+    right: 300px;
+    top: 180px;
+    background-color: var(--main-color-2);
+    color: white;
+    font-weight: 900;
+}
+
+
+/****************************************
+**TABLE INCOME AND EXPENSE TRANSACTIONS** 
+*****************************************/
+
+.table {
+    border-collapse: collapse;
+    right: 0;
+    width: 75%;
+    position: absolute;
+    right: 20px;
+    top: 130px;
+}
+
+.table-user-transactions {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td,
+th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: var(--main-color-2);
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: var(--main-color-2);
+}
+
+.last-row {
+    font-weight: 900;
+}
