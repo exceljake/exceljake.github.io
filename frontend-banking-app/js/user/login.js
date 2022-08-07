@@ -21,11 +21,13 @@ loginSubmitBtn.onclick = function(e) {
         if (result === undefined) alert("Wrong credentials. Please try again!");
         else {
             if (result !== undefined && result.isAdmin) {
-                window.location = "/admin-dashboard-html/create-user.html";
+                // window.location = "/admin-dashboard-html/create-user.html";
+                window.location = "../../../frontend-banking-app/admin-dashboard-html/create-user.html"
                 alert("Welcome Admin!")
                 currentUser(mobile.value);
             } else {
-                window.location = "/user-dashboard-html/user-profile.html";
+                // window.location = "/user-dashboard-html/user-profile.html";
+                window.location = "../../../frontend-banking-app/user-dashboard-html/user-profile.html"
                 alert(`Welcome ${result.fullname}!`)
                 currentUser(mobile.value);
             }
