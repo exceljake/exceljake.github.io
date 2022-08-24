@@ -6,9 +6,11 @@ import { users } from "../user/user.js";
 // MODAL INCOME
 
 const incomeAdd = document.querySelector('.income-add');
-const modalContainer = document.querySelector('.modal-container');
+const addIncomeContainer = document.querySelector('.add-income-container');
 const incomeSubmit = document.querySelector('.income-submit');
-const incomeClose = document.querySelector('.close-income');
+// const incomeClose = document.querySelector('.close-income');
+
+const incomeTransactions = document.querySelector('.income-transactions')
 
 const tBody = document.querySelector('tbody');
 
@@ -20,21 +22,26 @@ let current = JSON.parse(localStorage.getItem('currentUser'));
 let currentUserIndex = users.findIndex((u) => u.mobile === current);
 
 
-incomeClose.addEventListener('click', () => {
-    modalContainer.classList.remove('show');
-    tableSection.classList.remove('hide');
-})
+// incomeClose.addEventListener('click', () => {
+//     modalContainer.classList.remove('show');
+//     tableSection.classList.remove('hide');
+// })
 
 incomeAdd.onclick = function(e) {
     e.preventDefault();
-    modalContainer.classList.add('show');
-    tableSection.classList.add('hide');
+    addIncomeContainer.classList.remove('hide')
+    tableSection.classList.add('hide')
 }
 
 incomeSubmit.onclick = function() {
-    let income = addIncome("income", Number(current), Number(incomePrice.value));
+    addIncome("income", Number(current), Number(incomePrice.value));
     alert("Successfully added an income!");
     document.location.reload(true);
+}
+
+incomeTransactions.onclick = function() {
+    addIncomeContainer.classList.add('hide')
+    tableSection.classList.remove('hide')
 }
 
 for (let i = 0; i < users[currentUserIndex].incomes.length; i++) {

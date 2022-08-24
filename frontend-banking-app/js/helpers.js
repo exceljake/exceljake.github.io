@@ -4,44 +4,32 @@ import { users } from "./user/user.js";
 
 export let userInitialData = [{
         fullname: "user1",
-        mobile: 9293552644,
-        password: "password1",
+        mobile: 1,
+        password: "password",
         isAdmin: false,
     },
     {
         fullname: "user2",
-        mobile: 9393552644,
-        password: "password2",
+        mobile: 2,
+        password: "password",
         isAdmin: false,
     },
     {
         fullname: "user3",
-        mobile: 9493552644,
-        password: "password3",
+        mobile: 3,
+        password: "password",
         isAdmin: false,
     },
     {
         fullname: "user4",
-        mobile: 9593552644,
-        password: "password4",
+        mobile: 4,
+        password: "password",
         isAdmin: false,
     },
     {
         fullname: "user5",
-        mobile: 9693552644,
-        password: "password5",
-        isAdmin: false,
-    },
-    {
-        fullname: "user6",
-        mobile: 9793552644,
-        password: "password6",
-        isAdmin: false,
-    },
-    {
-        fullname: "1",
-        mobile: 1,
-        password: "1",
+        mobile: 5,
+        password: "password",
         isAdmin: false,
     }
 ];
@@ -49,7 +37,7 @@ export let userInitialData = [{
 function addAdmin() {
     const admin = {
         fullname: "admin",
-        mobile: 9193552644,
+        mobile: 0,
         password: "admin",
         isAdmin: true,
     };

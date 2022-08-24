@@ -24,17 +24,16 @@ body {
 ******************/
 
 nav {
-    position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 100%;
+    width: 100%;
+    height: 70px;
     background-color: whitesmoke;
-    border-right: 5px solid var(--main-color-4);
+    border-bottom: 5px solid var(--main-color-4);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 a,
@@ -47,7 +46,7 @@ a:active {
 
 .button-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -56,7 +55,7 @@ a:active {
     display: inline-block;
     text-decoration: none;
     padding: 5px 15px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: bold;
     color: var(--main-color-4);
     text-transform: uppercase;
@@ -76,17 +75,32 @@ a:active {
     font-size: 13px;
 }
 
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-bank-name {
+    color: var(--main-color-4);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
 .nav-logo {
-    height: 250px;
-    width: 250px;
+    height: 100px;
+    width: 100px;
 }
 
 .user-dashboard-title-div {
-    width: 80vw;
     background-color: rgba(133, 187, 101, 0.9);
     margin-top: 20px;
     height: 100px;
-    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-dashboard-title-text {
@@ -103,6 +117,14 @@ a:active {
 ***USER PROFILE*** 
 ******************/
 
+.user-profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 .user-profile-content {
     height: 350px;
     width: 350px;
@@ -112,8 +134,11 @@ a:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 47vw;
     margin-top: 70px;
+}
+
+.user-dashboard-title-div {
+    width: 100%;
 }
 
 .upc-text-details {
@@ -155,12 +180,23 @@ a:active {
     margin: 0;
 }
 
+.btn-container-income {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 40vw;
+}
+
 .income-add,
 .income-submit,
 .income-delete,
 .expense-add,
 .expense-submit,
-.expense-delete {
+.expense-delete,
+.income-transactions {
     background-color: var(--main-color-2);
     border: 0;
     border-radius: 5px;
@@ -173,16 +209,16 @@ a:active {
 
 .income-add,
 .expense-add {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0; */
 }
 
 .income-delete,
 .expense-delete {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 300px;
+    left: 300px; */
     cursor: pointer;
 }
 
@@ -237,13 +273,27 @@ a:active {
 **TABLE INCOME AND EXPENSE TRANSACTIONS** 
 *****************************************/
 
+.table-section {
+    width: 100%
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .table {
     border-collapse: collapse;
-    right: 0;
-    width: 75%;
-    position: absolute;
-    right: 20px;
-    top: 130px;
+    /* width: 1200px; */
+    width: 95vw;
+}
+
+.user-transactions-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .table-user-transactions {
@@ -270,4 +320,147 @@ tr:nth-child(even) {
 
 .last-row {
     font-weight: 900;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 50px;
+    padding: 1em;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: black;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+
+/* MEDIA */
+
+@media only screen and (max-width: 900px) {
+    .nav-bank-name {
+        visibility: hidden;
+    }
+    nav {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked~.menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media (max-width: 600px) {
+    .user-dashboard-title-text {
+        font-size: 50px;
+    }
+    .user-profile-content {
+        height: 285px;
+        width: 285px;
+    }
 }
