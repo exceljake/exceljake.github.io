@@ -5,9 +5,14 @@ import { users } from "../user/user.js";
 //Modal Expense
 
 const expenseAdd = document.querySelector('.expense-add');
-const modalContainerExpense = document.querySelector('.modal-container-expense');
+// const modalContainerExpense = document.querySelector('.modal-container-expense');
 const expenseSubmit = document.querySelector('.expense-submit');
-const expenseClose = document.querySelector('.close-expense');
+// const expenseClose = document.querySelector('.close-expense');
+
+const addExpenseContainer = document.querySelector('.add-expense-container');
+
+const expensesTransactions = document.querySelector('.expenses-transactions')
+
 const expensePrice = document.querySelector('.expense-price')
 
 const tBody = document.querySelector('tbody');
@@ -16,14 +21,14 @@ const tableSection = document.querySelector('.table-section');
 
 let current = JSON.parse(localStorage.getItem('currentUser'));
 
-expenseClose.addEventListener('click', () => {
-    modalContainerExpense.classList.remove('show');
-    tableSection.classList.remove('hide');
-})
+// expenseClose.addEventListener('click', () => {
+//     modalContainerExpense.classList.remove('show');
+//     tableSection.classList.remove('hide');
+// })
 
 expenseAdd.onclick = function(e) {
     e.preventDefault();
-    modalContainerExpense.classList.add('show');
+    addExpenseContainer.classList.remove('hide');
     tableSection.classList.add('hide');
 }
 
@@ -32,6 +37,12 @@ expenseSubmit.onclick = function() {
     alert("Successfully added an expense!");
     document.location.reload(true);
     // alert(currentUserIndex);
+}
+
+expensesTransactions.onclick = function(e) {
+    e.preventDefault();
+    addExpenseContainer.classList.add('hide');
+    tableSection.classList.remove('hide');
 }
 
 
