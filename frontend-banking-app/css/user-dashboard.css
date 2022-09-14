@@ -72,7 +72,7 @@ a:active {
 .budget-app-button {
     color: var(--main-color-1);
     text-shadow: .5px .5px var(--main-color-3);
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .img-container {
@@ -180,14 +180,15 @@ a:active {
     margin: 0;
 }
 
-.btn-container-income {
+.btn-container-income,
+.btn-container-expense {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin-bottom: 10px;
     margin-top: 10px;
-    margin-left: 40vw;
+    margin-right: 50vw;
 }
 
 .income-add,
@@ -196,7 +197,8 @@ a:active {
 .expense-add,
 .expense-submit,
 .expense-delete,
-.income-transactions {
+.income-transactions,
+.expenses-transactions {
     background-color: var(--main-color-2);
     border: 0;
     border-radius: 5px;
@@ -207,18 +209,8 @@ a:active {
     cursor: pointer;
 }
 
-.income-add,
-.expense-add {
-    /* position: absolute;
-    bottom: 0;
-    right: 0; */
-}
-
 .income-delete,
 .expense-delete {
-    /* position: absolute;
-    bottom: 0;
-    left: 300px; */
     cursor: pointer;
 }
 
@@ -268,6 +260,11 @@ a:active {
     font-weight: 900;
 }
 
+.add-income-container,
+.add-expense-container {
+    margin-left: 10px;
+}
+
 
 /****************************************
 **TABLE INCOME AND EXPENSE TRANSACTIONS** 
@@ -285,7 +282,6 @@ a:active {
 
 .table {
     border-collapse: collapse;
-    /* width: 1200px; */
     width: 95vw;
 }
 
@@ -327,7 +323,6 @@ tr:nth-child(even) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 50px;
     padding: 1em;
 }
@@ -462,5 +457,17 @@ tr:nth-child(even) {
     .user-profile-content {
         height: 285px;
         width: 285px;
+    }
+    .btn-container-income,
+    .btn-container-expense {
+        width: 100%;
+    }
+    .income-add,
+    .income-delete,
+    .income-transactions,
+    .expenses-transactions,
+    .expense-add,
+    .expense-delete {
+        padding: 10px;
     }
 }
