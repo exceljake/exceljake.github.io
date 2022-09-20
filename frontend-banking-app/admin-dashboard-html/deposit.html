@@ -12,24 +12,37 @@
 
 <body>
 
-    <nav>
-        <div class="img-container"> <img src="../img/icons/savourbank-logo-name-removebg.png" class="nav-logo" alt=""></div>
-        <div class="nav-title">Admin Dashboard</div>
-        <div class="button-container">
-            <button class="create-user header-button"><a href="./create-user.html">Create User</a></button>
-            <button class="list-of-users header-button"><a href="/admin-dashboard-html/user-list.html">User List</a></button>
-            <button class="budget-app header-button transact-nav-button">Transact</button>
-            <button class="deposit header-button transact-button deposit-nav-button hide"><a href="./deposit.html">Deposit</a></button>
-            <button class="withdraw header-button transact-button withdraw-nav-button hide"><a href="./withdraw.html">Withdraw</a></button>
-            <button class="transfer header-button transact-button transfer-nav-button hide"><a href="./transfer.html">Transfer</a></button>
-            <button class="logout header-button"> <a href="../../frontend-banking-app/home-page-html/index.html">Logout</a></button>
+    <nav class="top-nav">
+        <div class="img-container"> <img src="../../frontend-banking-app/img/icons/savourbank-logo-removebg.png" class="nav-logo" alt="">
+            <div class="nav-bank-name">SavourBank</div>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+        </label>
+        <div class="menu button-container">
+
+            <li><button class="create-user header-button"><a href="./create-user.html">Create User</a></button></li>
+
+            <li><button class="list-of-users header-button"><a href="/frontend-banking-app/admin-dashboard-html/user-list.html">User List</a></button></li>
+
+            <li><button class="budget-app header-button transact-nav-button">Transact</button></li>
+
+            <li><button class="deposit header-button transact-button deposit-nav-button hide"><a href="./deposit.html">Deposit</a></button></li>
+
+            <li><button class="withdraw header-button transact-button withdraw-nav-button hide"><a href="./withdraw.html">Withdraw</a></button></li>
+
+            <li><button class="transfer header-button transact-button transfer-nav-button hide"><a href="./transfer.html">Transfer</a></button></li>
+
+            <li><button class="logout header-button"> <a href="../../frontend-banking-app/home-page-html/index.html">Logout</a></button></li>
         </div>
     </nav>
 
+    <div class="user-dashboard-title-div">
+        <div class="user-dashboard-title-text expense-title">Deposit</div>
+    </div>
+
     <section class="deposit-section">
-        <div class="user-dashboard-title-div">
-            <div class="user-dashboard-title-text expense-title">Deposit</div>
-        </div>
 
         <div class="deposit-container">
             <div class="deposit-content">
